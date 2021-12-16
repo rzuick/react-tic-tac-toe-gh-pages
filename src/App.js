@@ -29,9 +29,31 @@ const App = () => {
   // This starts state off as a 2D array of JS objects with
   // empty value and unique ids.
   const [squares, setSquares] = useState(generateSquares());
+  const [player, changePlayer] = useState(PLAYER_1);
+  console.log(squares);
+  // Wave 2
+  // According to the README, App needs a method to update state of the board
+  // could be onClickCallback that is passed to Board
+  const onClickCallback = (id) => {
+    const square = squares.map((oneSquareArray) => {
+      for (const insideSquare of oneSquareArray) {
+        if (insideSquare.id === id) {
+          insideSquare.value = player;
+        }
+      }
+      return oneSquareArray;
+    });
+    if (player === PLAYER_1) {
+      changePlayer(PLAYER_2);
+    }
+    else {
+      changePlayer(PLAYER_1);
+    }
+    setSquares(square);
+  };
   
 
-  // Wave 2
+  
   // You will need to create a method to change the square
   //   When it is clicked on.
   //   Then pass it into the squares as a callback
@@ -60,7 +82,7 @@ const App = () => {
         <button>Reset Game</button>
       </header>
       <main>
-        <Board squares={squares} /> 
+        <Board squares={squares} onClickCallback={onClickCallback}/> 
       </main>
     </div>
   );

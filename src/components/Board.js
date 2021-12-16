@@ -9,14 +9,15 @@ const generateSquareComponents = (squares, onClickCallback) => {
   // squares is a 2D Array, but 
   //  you need to return a 1D array
   //  of square components, so one list of lists
+  // concat is JS function that concatenates lists easily with this syntax
   const squaresArr = [].concat(...squares);
-  const squareGrid = squaresArr.map((square, i) => {
+  const squareGrid = squaresArr.map((square) => {
     return (
-      <Square key={i}
+      <Square key={square.id}
       onClickCallback={onClickCallback}
       value={square.value}
       id={square.id}
-    /> );
+    />);
   } 
 ); return squareGrid;
 };

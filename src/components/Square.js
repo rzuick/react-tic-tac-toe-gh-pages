@@ -1,19 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Square.css'
+import './Square.css';
 
 const Square = (props) => {
   // For Wave 1 enable this 
   //  Component to alert a parent 
-  //  component when it's clicked on.
-
-  return <button
+  //  component when it's clicked on, so use the onClickCallback?
+  // const insideSquare = () => {
+  //   if (props.value === '' && props.onClickCallback) {
+  //     props.onClickCallback(props.id);
+  //   }
+  console.log('props:',props);
+  
+  return (<button
     className="square"
+    onClick={() => {props.onClickCallback(props.id)}}
   >
     {props.value}
-  </button>
-}
+  </button>);
+};
 
 Square.propTypes = {
   value: PropTypes.string.isRequired,
