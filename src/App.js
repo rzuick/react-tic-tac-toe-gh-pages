@@ -52,6 +52,38 @@ const App = () => {
     setSquares(square);
   };
   
+  const checkForWinner = (squares) => {
+
+    const ticTacToeHelper = (squares) = {
+      let l = 0;
+      for (arr of squares) {
+        let arrSet = set(arr);
+        if (arrSet.size === 1 && PLAYER_1 in arrSet) {
+          return PLAYER_1;
+        } else if (arrSet.size === 1 && PLAYER_2 in arrSet) {
+          return PLAYER_2;
+        } else if (arr[l] === squares[1][l] === squares[2][l]) {
+          return arr[l];
+        } else l += 1;
+      } 
+      if (squares[0][0] === squares[1][1] === squares [2][2]) {
+        return squares[0][0];
+      }
+      
+      if (squares[0][2] === squares[1][1] === squares[2][0]) {
+        return squares[0][2];
+      }
+    }
+    const ticTacToeWinner = (squares) => {
+    let result = ticTacToeHelper(squares);
+    if (!result) {
+      let set1 = set(squares[0]);
+      let set2 = set(squares[1]);
+      let set3 = set(squares[2]);
+      if (set1.size === set2.size === set3.size) {
+        result = "Tie";
+    }} return result;
+    }
 
   
   // You will need to create a method to change the square
