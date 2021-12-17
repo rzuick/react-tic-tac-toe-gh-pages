@@ -104,7 +104,7 @@ const App = () => {
     setSquares(square);
     checkWinner(checkForWinner());
   };
-
+// right now you have to click reset button twice to be able to play again
   const resetGame = () => {
       let newBoard = generateSquares();
       winner = null;
