@@ -7,16 +7,6 @@ const Square = (props) => {
   // For Wave 1 enable this 
   //  Component to alert a parent 
   //  component when it's clicked on, so use the onClickCallback?
-  if (props.win) {
-    return (
-      <button className="square"
-      onClick={undefined}
-      >
-        {null}
-      </button>
-    );
-  }
-  console.log('Square propsWinner', props.win);
   return (<button
     className="square"
     onClick={() => {props.onClickCallback(props.id);}}
@@ -29,7 +19,6 @@ Square.propTypes = {
   value: PropTypes.string.isRequired,
   onClickCallback: PropTypes.func.isRequired,
   id: PropTypes.number.isRequired,
-  win: PropTypes.string
 };
 
 export default Square;
