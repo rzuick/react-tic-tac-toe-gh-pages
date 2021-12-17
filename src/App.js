@@ -27,7 +27,7 @@ const generateSquares = () => {
 const App = () => {
   const [squares, setSquares] = useState(generateSquares());
   const [player, changePlayer] = useState(PLAYER_1);
-  let [winner, checkWinner] = useState(null);
+  let [winner, checkWinner] = useState('');
   // Wave 2
 
   const checkForWinner = () => {
@@ -70,7 +70,7 @@ const App = () => {
       for (let arr of squares) {
         for (let obj of arr) {
           if (obj.value == '') {
-            return null;
+            return '';
           }
           continue;
         }
@@ -107,10 +107,12 @@ const App = () => {
     setSquares(square);
     checkWinner(checkForWinner());
   };
+  let winnerText = `Winner is ${winner}`;
   // right now you have to click reset button twice to be able to play again
   const resetGame = () => {
     let newBoard = generateSquares();
-    winner = null;
+    checkWinner('');
+    winnerText = `Winner is ${winner}`;
     setSquares(newBoard);
     changePlayer(PLAYER_1);
   };
@@ -119,12 +121,10 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <h1>React Tic Tac Toe</h1>
-        <h2>Winner is {winner} </h2>
+        <h2>{winnerText}</h2>
         <button
           className="reset"
-          onClick={() => {
-            resetGame();
-          }}
+          onClick={() => {resetGame();}}
         >
           Reset Game
         </button>
