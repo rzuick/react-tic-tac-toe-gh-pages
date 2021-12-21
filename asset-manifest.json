@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/rzuick/react-tic-tac-toe-gh-pages/static/css/main.403d685d.css",
-    "main.js": "/rzuick/react-tic-tac-toe-gh-pages/static/js/main.09b19b05.js",
-    "index.html": "/rzuick/react-tic-tac-toe-gh-pages/index.html",
-    "main.403d685d.css.map": "/rzuick/react-tic-tac-toe-gh-pages/static/css/main.403d685d.css.map",
-    "main.09b19b05.js.map": "/rzuick/react-tic-tac-toe-gh-pages/static/js/main.09b19b05.js.map"
+    "main.css": "/react-tic-tac-toe/static/css/main.403d685d.css",
+    "main.js": "/react-tic-tac-toe/static/js/main.09b19b05.js",
+    "index.html": "/react-tic-tac-toe/index.html",
+    "main.403d685d.css.map": "/react-tic-tac-toe/static/css/main.403d685d.css.map",
+    "main.09b19b05.js.map": "/react-tic-tac-toe/static/js/main.09b19b05.js.map"
   },
   "entrypoints": [
     "static/css/main.403d685d.css",
