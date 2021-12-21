@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/rzuick/react-tic-tac-toe-gh-pages",
   "name": "react-tic-tac-toe",
   "version": "0.1.0",
   "private": true,
@@ -11,7 +10,7 @@
     "react-dom": "^17.0.1",
     "react-scripts": "^5.0.0"
   },
-  
+  "homepage": "https://rzuick.github.io/react-tic-tac-toe/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
